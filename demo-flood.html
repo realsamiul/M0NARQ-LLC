@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flood Mapping — Monarq</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="demos.css" />
+</head>
+<body>
+  <section class="demo-section flood-demo">
+    <div class="container">
+      <div class="demo-header">
+        <span class="demo-engine">HawkEYE</span>
+        <h1 class="demo-title">30-minute flood mapping</h1>
+        <p class="demo-tagline">SAR + Optical + DEM fusion with SegFormer-B2-lite yields pixel-accurate flood extents and confidence maps.</p>
+      </div>
+
+      <div class="demo-content">
+        <div class="demo-block">
+          <h2>Data stack</h2>
+          <div class="method-grid">
+            <div class="method-item"><h4>SAR (Sentinel‑1)</h4><p>VV backscatter thresholds reveal inundation through water-induced darkening.</p></div>
+            <div class="method-item"><h4>Optical (Sentinel‑2)</h4><p>NDWI highlights open water; SWIR bands suppress vegetation confounders.</p></div>
+            <div class="method-item"><h4>DEM (SRTM/30 m)</h4><p>Low slope priors reduce false positives in steep terrain.</p></div>
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <h2>Model & fusion</h2>
+          <p class="lead">Three-channel fusion (SAR VV, NDWI, slope) feeds a SegFormer-B2-lite backbone; CRF post-processing sharpens boundaries and removes speckle.</p>
+          <div class="results-grid">
+            <div class="result-card"><div class="result-value">95%+</div><div class="result-label">IoU</div><p>Held-out validation across Pakistan, Bangladesh, India.</p></div>
+            <div class="result-card"><div class="result-value">30 min</div><div class="result-label">Pipeline</div><p>Acquisition → preprocess → inference → QC.</p></div>
+            <div class="result-card"><div class="result-value">0.64 M</div><div class="result-label">Params</div><p>Streamlined U-Net-variant for fast inference.</p></div>
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <h2>Sample imagery</h2>
+          <div class="gallery">
+            <img alt="Pakistan 2022 floods (Sentinel-2)" src="https://sentinels.copernicus.eu/documents/247904/4735970/Floods-Pakistan-2022.jpg" />
+            <img alt="Bangladesh Dhaka OLI 2022" src="https://eoimages.gsfc.nasa.gov/images/imagerecords/152000/152161/dhaka_oli_2022273_lrg.jpg" />
+            <img alt="Asia VIIRS night lights 2016" src="https://eoimages.gsfc.nasa.gov/images/imagerecords/144000/144898/asia_vir_2016_lrg.jpg" />
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <h2>Why it matters</h2>
+          <p class="lead">Near-real-time flood intelligence moves resource allocation from reactive to proactive—informing evacuations, route planning, and damage triage in hours, not days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>

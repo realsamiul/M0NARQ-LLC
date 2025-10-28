@@ -1,0 +1,41 @@
+
+.engine-section{ padding:var(--space-2xl) 0; min-height:100vh; position:relative }
+.engine-section::before{ content:''; position:absolute; inset:0; background:linear-gradient(rgba(15,15,16,0.8),rgba(28,28,30,0.9)); z-index:0 }
+.engine-section .container{ position:relative; z-index:1 }
+
+.hawkeye-engine{ background:url('https://sentinels.copernicus.eu/documents/247904/4735970/Sentinel-2_image.jpg') center/cover fixed }
+.omega-engine{ background:url('https://eoimages.gsfc.nasa.gov/images/imagerecords/79000/79793/city_lights_asia_night_2012_lrg.jpg') center/cover fixed }
+
+.engine-header{ text-align:center; margin-bottom:var(--space-xl); padding-top:80px }
+.engine-badge{ display:inline-block; padding:6px 14px; background:rgba(232,212,209,0.1); color:var(--monarq-pink); border-radius:20px; font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:var(--space-sm) }
+.engine-title{ font-size:clamp(3rem,7vw,5rem); font-weight:800; letter-spacing:-0.03em; margin-bottom:var(--space-sm); background:linear-gradient(135deg,var(--monarq-teal) 0%,var(--monarq-pink) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text }
+.engine-tagline{ font-size:clamp(1.05rem,2vw,1.35rem); color:var(--text-secondary); max-width:740px; margin:0 auto }
+
+.engine-content{ max-width:1100px; margin:0 auto }
+.engine-block{ margin-bottom:var(--space-2xl) }
+.engine-block h2{ font-size:clamp(1.8rem,4vw,2.5rem); margin-bottom:var(--space-md); color:var(--text-primary) }
+.engine-block h3{ font-size:clamp(1.4rem,3vw,2rem); margin-bottom:var(--space-md); color:var(--monarq-teal) }
+.engine-block .lead{ font-size:1.1rem; color:var(--text-secondary); line-height:1.7 }
+
+.capability-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:var(--space-lg); margin-top:var(--space-xl) }
+.capability-card{ background:var(--bg-tertiary); padding:var(--space-lg); border-radius:16px; border:1px solid rgba(255,255,255,0.06); transition:var(--transition-fast) }
+.capability-card:hover{ border-color:var(--monarq-teal); transform:translateY(-4px); box-shadow:0 12px 40px rgba(32,197,186,0.15) }
+.capability-card h4{ font-size:1.25rem; margin-bottom:var(--space-sm); color:var(--monarq-teal) }
+.capability-card > p{ color:var(--text-secondary); margin-bottom:var(--space-md); font-size:1.02rem }
+
+.metric-row{ display:flex; align-items:baseline; gap:var(--space-sm); padding-top:var(--space-md); border-top:1px solid rgba(255,255,255,0.06) }
+.metric-value{ font-size:1.8rem; font-weight:800; color:var(--monarq-pink) }
+.metric-label{ font-size:0.82rem; color:var(--text-tertiary); text-transform:uppercase; letter-spacing:0.05em }
+
+.spec-table{ background:var(--bg-tertiary); border-radius:12px; overflow:hidden; margin-top:var(--space-lg) }
+.spec-row{ display:grid; grid-template-columns:1fr 2fr; gap:var(--space-md); padding:var(--space-md); border-bottom:1px solid rgba(255,255,255,0.06) }
+.spec-row:last-child{ border-bottom:none }
+.spec-label{ color:var(--text-secondary); font-weight:700; font-size:0.95rem }
+.spec-value{ color:var(--text-primary); font-size:0.95rem }
+
+@media (max-width:768px){
+  .engine-section{ padding:var(--space-xl) 0 }
+  .engine-header{ padding-top:60px }
+  .capability-grid{ grid-template-columns:1fr }
+  .spec-row{ grid-template-columns:1fr; gap:var(--space-xs) }
+}

@@ -1,0 +1,48 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Economic Nowcasting — Monarq</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="demos.css" />
+</head>
+<body>
+  <section class="demo-section nightlights-demo">
+    <div class="container">
+      <div class="demo-header">
+        <span class="demo-engine">OMEGA</span>
+        <h1 class="demo-title">Nightlights economic nowcasting</h1>
+        <p class="demo-tagline">VIIRS Day/Night Band radiance tracks urban metabolism, mobility, and recovery—paired with causal graphs for robust signals.</p>
+      </div>
+
+      <div class="demo-content">
+        <div class="demo-block">
+          <h2>Method</h2>
+          <div class="method-grid">
+            <div class="method-item"><h4>VIIRS composites</h4><p>Monthly cloud-free radiance grids standardize seasonal and lunar effects.</p></div>
+            <div class="method-item"><h4>Nowcasting</h4><p>OLS baselines with causal pruning to avoid spurious correlations.</p></div>
+            <div class="method-item"><h4>Validation</h4><p>Cross-checks with mobility, transactions, and sectoral activity proxies.</p></div>
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <h2>Sample imagery</h2>
+          <div class="gallery">
+            <img alt="Asia VIIRS 2016" src="https://eoimages.gsfc.nasa.gov/images/imagerecords/144000/144898/asia_vir_2016_lrg.jpg" />
+            <img alt="City lights Asia 2012" src="https://eoimages.gsfc.nasa.gov/images/imagerecords/79000/79793/city_lights_asia_night_2012_lrg.jpg" />
+            <img alt="Dhaka OLI 2022 context" src="https://eoimages.gsfc.nasa.gov/images/imagerecords/152000/152161/dhaka_oli_2022273_lrg.jpg" />
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <h2>Applications</h2>
+          <p class="lead">Track shocks and recoveries, allocate resources, and monitor policy impacts—updated monthly with consistent public data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>

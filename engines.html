@@ -1,0 +1,114 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Engines — Monarq</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="engines.css" />
+</head>
+<body>
+
+  <!-- HawkEYE -->
+  <section class="engine-section hawkeye-engine" id="hawkeye">
+    <div class="container">
+      <div class="engine-header">
+        <span class="engine-badge">HawkEYE</span>
+        <h1 class="engine-title">Geospatial intelligence with Vision Transformers</h1>
+        <p class="engine-tagline">SAR + Optical + DEM fusion with SegFormer-B2-lite, CRF post-processing, and streamlined inference for real-time mapping.</p>
+      </div>
+
+      <div class="engine-content">
+        <div class="engine-block">
+          <h2>What it does</h2>
+          <p class="lead">Detects floods in minutes, quantifies crop stress without labels, and produces uncertainty-aware masks for operations.</p>
+          <div class="capability-grid">
+            <div class="capability-card">
+              <h4>Multi-modal fusion</h4>
+              <p>SAR VV, NDWI from Sentinel‑2, and slope combine into a robust 3‑channel tensor.</p>
+              <ul>
+                <li>Speckle-robust prefilters</li>
+                <li>Radiometric/terrain normalization</li>
+                <li>Tile streaming for scale</li>
+              </ul>
+              <div class="metric-row"><div class="metric-value">30 min</div><div class="metric-label">End‑to‑end</div></div>
+            </div>
+            <div class="capability-card">
+              <h4>Transformer backbone</h4>
+              <p>SegFormer‑B2‑lite balances accuracy and speed, with CRF to sharpen boundaries.</p>
+              <ul>
+                <li>0.64M parameter variant</li>
+                <li>Pixel‑accurate edges</li>
+                <li>On‑device ready</li>
+              </ul>
+              <div class="metric-row"><div class="metric-value">95%+</div><div class="metric-label">IoU (held‑out)</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="engine-block">
+          <h3>Specs</h3>
+          <div class="spec-table">
+            <div class="spec-row"><div class="spec-label">Inputs</div><div class="spec-value">Sentinel‑1 VV, Sentinel‑2 MSI (NDWI), DEM slope</div></div>
+            <div class="spec-row"><div class="spec-label">Output</div><div class="spec-value">Flood/stress masks + uncertainty</div></div>
+            <div class="spec-row"><div class="spec-label">Latency</div><div class="spec-value">~30 minutes pipeline</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OMEGA -->
+  <section class="engine-section omega-engine" id="omega">
+    <div class="container">
+      <div class="engine-header">
+        <span class="engine-badge">OMEGA</span>
+        <h1 class="engine-title">Multi-modal predictive analytics</h1>
+        <p class="engine-tagline">Fuse satellite, weather, economic, and health metrics; apply causal ML and hybrid forecasting for actionable 7‑day outlooks.</p>
+      </div>
+
+      <div class="engine-content">
+        <div class="engine-block">
+          <h2>What it does</h2>
+          <p class="lead">Forecasts outbreaks and economic activity using Prophetic trend, gradient-boosted features, and causal graph constraints.</p>
+          <div class="capability-grid">
+            <div class="capability-card">
+              <h4>Nightlights nowcasting</h4>
+              <p>VIIRS monthly radiance tracks activity and supports anomaly detection.</p>
+              <ul>
+                <li>Bias-corrected composites</li>
+                <li>City-level drilldowns</li>
+                <li>Shock & recovery timelines</li>
+              </ul>
+              <div class="metric-row"><div class="metric-value">Monthly</div><div class="metric-label">Updates</div></div>
+            </div>
+            <div class="capability-card">
+              <h4>Dengue forecasts</h4>
+              <p>Cases, weather, and satellite proxies inform 7‑day forecasts with uncertainty bands.</p>
+              <ul>
+                <li>9.8% MAPE in Dhaka</li>
+                <li>Causal lags discovered</li>
+                <li>Actionable confidence</li>
+              </ul>
+              <div class="metric-row"><div class="metric-value">7 days</div><div class="metric-label">Horizon</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="engine-block">
+          <h3>Specs</h3>
+          <div class="spec-table">
+            <div class="spec-row"><div class="spec-label">Inputs</div><div class="spec-value">Cases, weather, population, VIIRS, domain signals</div></div>
+            <div class="spec-row"><div class="spec-label">Models</div><div class="spec-value">Prophet + LightGBM + Tigramite</div></div>
+            <div class="spec-row"><div class="spec-label">Output</div><div class="spec-value">Forecasts + causal drivers + uncertainty</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><p>© Monarq Intelligence</p></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

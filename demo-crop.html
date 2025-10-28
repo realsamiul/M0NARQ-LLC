@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Crop Intelligence — Monarq</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="demos.css" />
+</head>
+<body>
+  <section class="demo-section crop-demo">
+    <div class="container">
+      <div class="demo-header">
+        <span class="demo-engine">HawkEYE</span>
+        <h1 class="demo-title">Self-supervised crop stress</h1>
+        <p class="demo-tagline">SimSiam embeddings over 9-band Sentinel‑2 tiles with K‑Means (k=4) discover healthy→severe stress without labels.</p>
+      </div>
+
+      <div class="demo-content">
+        <div class="demo-block">
+          <h2>Data & features</h2>
+          <div class="method-grid">
+            <div class="method-item"><h4>Sentinel‑2 MSI</h4><p>RGB, NIR, SWIR, Red Edge at 10–20 m power stress profiling and phenology.</p></div>
+            <div class="method-item"><h4>Tile embeddings</h4><p>Self-supervised representations capture structure, texture, and spectral continuity.</p></div>
+            <div class="method-item"><h4>Clustering</h4><p>Field-scale stress maps for “healthy, mild, moderate, severe.”</p></div>
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <h2>Jessore pilot</h2>
+          <p class="lead">Rice, jute, and mustard parcels show 8.27% stress discovery with no manual labels—useful for early advisory and targeted scouting.</p>
+          <div class="results-grid">
+            <div class="result-card"><div class="result-value">8.27%</div><div class="result-label">Discovery</div><p>No-label stress segmentation.</p></div>
+            <div class="result-card"><div class="result-value">10 m</div><div class="result-label">Resolution</div><p>Parcel-scale insights.</p></div>
+            <div class="result-card"><div class="result-value">9 bands</div><div class="result-label">MSI</div><p>Red Edge + SWIR for vegetation water content.</p></div>
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <h2>Sample imagery</h2>
+          <div class="gallery">
+            <img alt="Sentinel-2 agriculture" src="https://sentinels.copernicus.eu/documents/247904/4629279/Sentinel-2_agriculture.jpg" />
+            <img alt="Sentinel-2 sample image" src="https://sentinels.copernicus.eu/documents/247904/4735970/Sentinel-2_image.jpg" />
+            <img alt="Asia night lights (context)" src="https://eoimages.gsfc.nasa.gov/images/imagerecords/144000/144898/asia_vir_2016_lrg.jpg" />
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <h2>Operational use</h2>
+          <p class="lead">Rank parcels by risk, direct agronomy teams, and monitor intervention impact weekly using open data and reproducible pipelines.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>

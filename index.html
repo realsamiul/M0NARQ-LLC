@@ -1,0 +1,126 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Monarq — Orbit to Insight</title>
+  <meta name="description" content="AI-powered satellite analytics for disasters, crops, economies, and health." />
+  <link rel="preconnect" href="https://eoimages.gsfc.nasa.gov" />
+  <link rel="preconnect" href="https://sentinels.copernicus.eu" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="demos.css" />
+  <link rel="stylesheet" href="engines.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-content">
+      <a class="logo" href="index.html"><span class="logo-text">MONARQ</span></a>
+      <div class="nav-links">
+        <a class="active" href="index.html">Home</a>
+        <a href="engines.html">Engines</a>
+        <a href="demos.html">Demos</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">From orbit to insight in real time</h1>
+      <p class="hero-subtitle">
+        Vision Transformers, self-supervised learning, and causal analytics fuse SAR, optical, DEM, weather, and nightlights into decisions you can use today.
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-value">32%</span>
+          <span class="stat-label">Faster response</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">95%</span>
+          <span class="stat-label">Flood IoU</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">9.8%</span>
+          <span class="stat-label">Dengue MAPE</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">10 m</span>
+          <span class="stat-label">Multispectral</span>
+        </div>
+      </div>
+      <div style="margin-top: 36px;">
+        <a class="btn btn-primary" href="demos.html">Explore demos</a>
+        <a class="btn btn-secondary" href="engines.html">See engines</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Two engines, one platform</h2>
+      <p class="section-subtitle">HawkEYE maps what’s happening now from space; OMEGA predicts what comes next with causal machine learning.</p>
+
+      <div class="demo-grid">
+        <a class="demo-card" href="engines.html#hawkeye">
+          <h3>HawkEYE</h3>
+          <div class="demo-percentage">30 min</div>
+          <p>Multi-modal SAR + Optical + DEM fusion for disaster mapping and crop insights.</p>
+          <ul class="demo-metrics">
+            <li>SegFormer-B2-lite ViT backbone</li>
+            <li>SAR VV, NDWI, slope features</li>
+            <li>Pixel-accurate masks</li>
+          </ul>
+        </a>
+        <a class="demo-card" href="engines.html#omega">
+          <h3>OMEGA</h3>
+          <div class="demo-percentage">7 days</div>
+          <p>Forecast outbreaks and economic activity with nightlights, weather, and causal discovery.</p>
+          <ul class="demo-metrics">
+            <li>Prophet + LightGBM features</li>
+            <li>Tigramite causal graphs</li>
+            <li>Uncertainty bands</li>
+          </ul>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">What you can do</h2>
+      <p class="section-subtitle">Detect floods in minutes, quantify crop stress without labels, nowcast urban metabolism, and forecast outbreaks with confidence.</p>
+
+      <div class="demo-grid">
+        <a class="demo-card" href="demo-flood.html">
+          <h3>Flood mapping</h3>
+          <div class="demo-percentage">95%</div>
+          <p>30-minute fusion of SAR + Optical + DEM for pixel-accurate flood extent.</p>
+        </a>
+        <a class="demo-card" href="demo-crop.html">
+          <h3>Crop intelligence</h3>
+          <div class="demo-percentage">8.27%</div>
+          <p>Self-supervised discovery of stress gradients with no human labels.</p>
+        </a>
+        <a class="demo-card" href="demo-nightlights.html">
+          <h3>Economic nowcasting</h3>
+          <div class="demo-percentage">VIIRS</div>
+          <p>Nighttime radiance tracks activity and resilience at city scale.</p>
+        </a>
+        <a class="demo-card" href="demo-dengue.html">
+          <h3>Dengue forecasts</h3>
+          <div class="demo-percentage">7 days</div>
+          <p>Multi-modal fusion and causality for actionable outbreak warnings.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© Monarq Intelligence</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dengue Forecasts — Monarq</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="demos.css" />
+</head>
+<body>
+  <section class="demo-section disease-demo">
+    <div class="container">
+      <div class="demo-header">
+        <span class="demo-engine">OMEGA</span>
+        <h1 class="demo-title">7‑day dengue forecasts</h1>
+        <p class="demo-tagline">Multi-modal fusion of cases, weather, population, and satellite proxies with causal discovery and uncertainty bands.</p>
+      </div>
+
+      <div class="demo-content">
+        <div class="demo-block">
+          <h2>Signals</h2>
+          <div class="method-grid">
+            <div class="method-item"><h4>Cases & population</h4><p>Unified daily series with rates per 100k for trend fidelity.</p></div>
+            <div class="method-item"><h4>Weather</h4><p>Temperature, humidity, and rainfall influence vector dynamics.</p></div>
+            <div class="method-item"><h4>Satellite proxies</h4><p>Nightlights and surface water augment transmission risk context.</p></div>
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <h2>Model</h2>
+          <p class="lead">Prophet handles trend/seasonality; LightGBM contributes feature interactions; Tigramite reveals lag structure and prunes confounding paths.</p>
+          <div class="results-grid">
+            <div class="result-card"><div class="result-value">9.8%</div><div class="result-label">MAPE</div><p>Seven-day horizon in Dhaka evaluation.</p></div>
+            <div class="result-card"><div class="result-value">±CI</div><div class="result-label">Uncertainty</div><p>Forecast bands for actionable planning.</p></div>
+            <div class="result-card"><div class="result-value">Multi‑modal</div><div class="result-label">Fusion</div><p>Robustness to missing or noisy signals.</p></div>
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <h2>Sample imagery</h2>
+          <div class="gallery">
+            <img alt="Dhaka OLI 2022" src="https://eoimages.gsfc.nasa.gov/images/imagerecords/152000/152161/dhaka_oli_2022273_lrg.jpg" />
+            <img alt="Asia VIIRS 2016" src="https://eoimages.gsfc.nasa.gov/images/imagerecords/144000/144898/asia_vir_2016_lrg.jpg" />
+            <img alt="Sentinel-2 agriculture context" src="https://sentinels.copernicus.eu/documents/247904/4629279/Sentinel-2_agriculture.jpg" />
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <h2>Operational use</h2>
+          <p class="lead">Prioritize vector control, stock supplies, and target alerts by zone with confidence intervals and causal drivers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
